@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+
+
+
+        }
+        body{
+        background: linear-gradient(135deg, rgba(15,32,39,0.65),rgba(32,58,67,0.65),rgba(44,83,100,0.65)) ,url('./newyork.jpg') no-repeat;
+
+
+        }
+        .header{
+        background-color: rgba(255, 255, 255, 0.0);
+        text-align: center;
+        height: 100px;
+        
+        }
+        button{
+        background-color: rgba(255, 255, 255);
+        font-size: 20px;
+        Margin: 10px;
+        padding: 10px;
+        border: none;
+        background: none;
+        }
+        button:hover{
+        text-decoration: underline;
+        }
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+              img{
+        height: 500px;
+        }
+      * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1300px;
+
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+footer{
+  padding:0;
+  margin: 75px;
+  background: #222;
+  font-family: 'Roboto';
+  align-items: center;
+}
+ul.footer{
+  position: absolute;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  
+}
+ul.footer li{
+  list-style-type: none;
+  margin: 0 7px;
+  padding: 50px;
+}
+ul.footer li a .fa{
+  line-height: 80px;
+  color: #262626;
+  transition: 0.5s;
+  font-size: 40px;
+  padding-right: 15px;
+}
+ul.footer li a span{
+  position: absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 4px;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;  
+}
+ul.footer li a{
+text-decoration: none;
+display: absolute;
+display: block;
+width: 210px;
+height: 80px;
+text-align: left;
+background: #f2f2f2;
+padding-left: 20px;
+transform: rotate(-30deg) skewX(25deg);
+box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+transition: 0.5s;
+}
+ul.footer li a:before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewY(-45deg);
+  transform: 0.5s;
+}
+ul.footer li a:after{
+content: '';
+position: absolute;
+bottom: -20px;
+left: -10px;
+height: 20px;
+width: 100%;
+background: #b1b1b1;
+transform: rotate(0deg) skewX(-45deg);
+transition: 0.5s;
+}
+ul.footer li a:hover{
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+ul.footer li:hover .fa{
+  color: #fff;
+}
+ul.footer li:hover span{
+  color: #fff;
+}      
+ul li:hover .fa{
+  color: #fff;
+}
+ul li:hover span{
+  color: #fff;
+}
+ul.footer li:hover:nth-child(1) a{
+  background: #6b03fc;
+}
+ul.footer li:hover:nth-child(1) a:before{
+  background: #8003fc;
+}
+ul.footer li:hover:nth-child(1) a:after{
+  background: #8003fc;
+}
+ul li:hover:nth-child(2) a{
+  background: linear-gradient(#8A2387,#E94057,#F27121);
+}
+ul li:hover:nth-child(2) a:before{
+  background: #8A2387;
+}
+ul li:hover:nth-child(2) a:after{
+  background: #8A2387;
+}
+ul li:hover:nth-child(3) a{
+  background: #53b9e0;
+}
+ul li:hover:nth-child(3) a:before{
+  background: #53b9e0;
+}
+ul li:hover:nth-child(3) a:after{
+  background: #53b9e0;
+}
+      ul li:hover:nth-child(4) a{
+  background: #dd4b39;
+}
+ul li:hover:nth-child(4) a:before{
+  background: #dd4b39;
+}
+ul li:hover:nth-child(4) a:after{
+  background: #dd4b39;
+}
+      
+.contact{
+background-color: rgba(255, 255, 255, .40);
+width: 600px;
+border-radius: 15px;
+display: flex;
+}
+  .container{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /*this spaces them out on main axis */
+  align-items: center; /*this spaces them out on secondary axis (vertical in this case)*/
+  gap: 15px;
+  }
+
+  .item-1{
+  height:500px;
+  flex-grow: 1;
+  background-color: #fb7185;
+  flex-grow: 1;
+  display:flex;
+  border-radius: 15px;
+  background-color: #343d46;
+  margin:25px;
+    }
+    .item-2{
+  height:500px;
+  flex-grow: 1;
+  background-color: #71a832;
+  border-radius: 15px;
+  max-width:50%;
+  background-color: #343d46;
+  margin:25px;
+
+  }
+  p{
+  padding-top:20px;
+  padding-right:50px;
+  padding-left:50px;
+  padding-bottom:25px;
+  color:white;
+  font-size: 20px;
+  font-family: Georgia,Times,Times New Roman,serif;
+
+  }
+    .left-item{
+  height:500px;
+  flex-grow: 1;
+  background-color: #9c32a8;
+  flex-grow: 1;
+  border-radius: 15px;
+  max-width:50%;
+  background: rgba(131,58,180,0);
+
+    }
+    .right-item{
+  height:500px;
+  flex-grow: 1;
+  background-color: #9c32a8;
+  flex-grow: 1;
+  border-radius: 15px;
+  background: rgba(131,58,180,0);
+
+    }
+  h1.contact-head{
+  color: white;
+  padding: 15px;
+  }
+  .form-group{
+margin-bottom: 15px;
+}
+.form-group.msg{
+margin-top: 40px;
+}
+.form-group.buttons{
+margin-top: 0px;
+}
+.form-control{
+width: 100%;
+padding: 10px 0;
+background-color: transparent;
+border: none;
+outline: none;
+font-size:14px;
+color:#ddd;
+text-transform: uppercase;
+border-bottom:1px solid #666;
+transition: border-color 0.2s;
+margin-top:50px;
+}
+.form-control::placeholder{
+color:#666;
+}
+.form-control:focus{
+border-bottom-color:#ddd;
+}
+.form-btn{
+background-color:transparent;
+border:none;
+font-family:'Century Gothic';
+font-size:14px;
+cursor: pointer;
+outline:none;
+color:white;
+margin: 15px 15px 0px 15px;
+border-bottom: 1px solid white;
+transition: 0.5s;
+}
+ul.contact-ref{
+list-style:none;
+margin:0;
+padding-top:30px;
+color:white;
+}
+ul.contact-ref li{
+
+width:70px;
+height:70px;
+margin:10px;
+padding:10px;
+border-radius:50%;
+text-align:center;
+font-size:50px;
+color:white;
+}
+hover ul.contact-ref li{
+
+}
+span.list-name{
+font-size: 40px;
+padding-left: 50px;
+
+}
+ul.contact-ref li.linked{
+margin-left:0px;
+background: #dd4b39;
+}
+ul.contact-ref li.insta{
+margin-left:0px;
+background: linear-gradient(#8A2387,#E94057,#F27121);
+}
+ul.contact-ref li.github{
+margin-left:0px;
+background: #6e5494;
+}
+ul.contact-ref li.twitter{
+margin-left:0px;
+background: #00acee;
+}
+      
+    </style>
+
+</head>
+
+<section class="header" id="header">
+    <nav>
+        <div id="hb">
+        
+        <a href="htmlcss.html"><button style="margin-right: 100px;color: rgba(255,255,255,.6);">HTML and CSS Projects</button></a>
+        <a href="index.html"><button style="margin-right: 50px; marin-left: 50px;color: rgba(255,255,255,.6);"><img src="Emblem.png"     
+        style="height:50px; padding: 0px; margin:0px;"></button></a>
+        <a href="aboutme.html"><button style="margin-left: 100px;color: rgba(255,255,255,.6);">About Me</button></a>
+        </div>
+    </nav>
+</section>
+<body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade" class="opener">
+    <div class="numbertext">1 / 3</div>
+    <img src="Portrait.png" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="kendra.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="landscape1.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+  <br>
+  <div class="container">
+    <div class="item-1">
+      <div class="left-item">
+        <h1 class="contact-head">
+          You can contact me<br>
+          @ (608) 851-1371
+          <ul class="contact-ref">
+            <a href="https://www.linkedin.com/in/donavan-gertsch-6a8515260/"><li class="linked"><i class="fa fa-linkedin"></i></li></a>
+            <a href="https://instagram.com/donavan.gertsch?igshid=YmMyMTA2M2Y="><li class="insta"><i class="fa fa-instagram"></i></li></a>
+            <a href="https://github.com/Donavan-Gertsch/Portfolio"><li class="github"><i class="fa fa-github"></i></li></a>
+            <a href="https://twitter.com/GertschDonavan"><li class="twitter"><i class="fa fa-twitter"></i></li></a>
+          </ul>
+        </h1>
+      </div>
+      <div class="right-item">
+          <div class="contact-form">
+            <form method="POST" action="email.php">
+
+              <div class="form-group">
+                <input type="text" name="phone" class="form-control"
+                       placeholder="MOBILE">
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" class="form-control"
+                       placeholder="EMAIL">
+              </div>
+              <div class="form-group msg">
+                <input type="text" name="message" class="form-control"
+                       placeholder="MESSAGE">
+              </div>
+              <div class="form-group">
+                <input type="text" name="name" class="form-control"
+                       placeholder="Name">
+              </div>
+              <div class="form-group buttons">
+                <button class="form-btn">CONTACT</button>
+                <button class="form-btn">CANCEL</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <!---------------------------Start of Mission Statement------------------------------------------------->
+    <div class="item-2">
+      <h1 style="text-align: center; color:white; font-size:40px; 	font-family: Georgia,Times,Times New Roman,serif;" padding:30px;><b>My Mission Statement</b></h1><hr>
+      <p>As a computer science student, my mission is to use my knowledge and skills to create innovative and impactful technology solutions that solve real-world problems. My goal is to stay at the forefront of the field by continuously learning and experimenting with new technologies and methodologies.<br>
+
+      In my portfolio, you will find a variety of projects that demonstrate my abilities in areas such as software development, data analysis, and machine learning. These projects showcase my ability to work independently and in teams, as well as my ability to think critically and creatively when solving problems.<br>
+
+      As I continue to develop my skills and knowledge, I am particularly interested in exploring how technology can be used to improve healthcare, education, and sustainability. I believe that technology has the power to make a real difference in people's lives, and I am committed to using my skills to make a positive impact on the world.<br>
+      </p>
+    </div>
+
+  </div>
+
+  
+  
+</body>
+<footer>
+  <ul class="footer">
+        <!--------------------------------------------->
+
+      <li>
+        <a href="https://github.com/Donavan-Gertsch/Portfolio">
+            <i class="fa fa-github"></i>
+            <span> Github </span>
+        </a>
+      </li
+    <!----------------------------------------------->
+
+            <li>
+        <a href="https://instagram.com/donavan.gertsch?igshid=YmMyMTA2M2Y=">
+            <i class="fa fa-instagram"></i>
+            <span> Instagram </span>
+        </a>
+            </li>
+    <!----------------------------------------------->
+          <li>
+        <a href="https://twitter.com/GertschDonavan">
+            <i class="fa fa-twitter"></i>
+            <span> Twitter </span>
+        </a>
+          </li>
+      <!---------------------------------------------->
+          <li>
+        <a href="https://www.linkedin.com/in/donavan-gertsch-6a8515260/">
+            <i class="fa fa-linkedin"></i>
+            <span> Linkedin </span>
+        </a>
+          </li>
+
+  </ul>      
+</footer>
+</html>

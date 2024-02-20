@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>My Portfolio</title>
+    <link href="scratch.css" rel="stylesheet" type="text/css"/>
+    <link href="website.java" rel="stylesheet" type="text/css"/>
+    <link href="html/a1.html"/>
+    <script src="website.java">
+// Get all elements with class="closebtn"
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+// Loop through all close buttons
+for (i = 0; i < close.length; i++) {
+  // When someone clicks on a close button
+  close[i].onclick = function(){
+
+    // Get the parent of <span class="closebtn"> (<div class="alert">)
+    var div = this.parentElement;
+
+    // Set the opacity of div to 0 (transparent)
+    div.style.opacity = "0";
+
+    // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+
+
+
+        }
+        body{
+        background: linear-gradient(135deg, rgba(15,32,39,0.65),rgba(32,58,67,0.65),rgba(44,83,100,0.65)) ,url('./newyork.jpg') no-repeat;
+
+
+        }
+        .header{
+        background-color: rgba(255, 255, 255, 0.0);
+        text-align: center;
+        height: 100px;
+        
+        }
+        button{
+        background-color: rgba(255, 255, 255);
+        font-size: 20px;
+        Margin: 10px;
+        padding: 10px;
+        border: none;
+        background: none;
+        }
+        button:hover{
+        text-decoration: underline;
+        }
+        img{
+        padding: 25px;
+        height: 350px;
+        }
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+        .slideshow{
+        text-align: left;
+        margin: 0px;
+        }
+
+    </style>
+
+</head>
+
+<section class="header" id="header">
+    <nav>
+        <div id="hb">
+        
+        <a href="java.html"><button style="margin-right: 100px; color: rgba(255,255,255,.6);">Java Projects</button></a>
+        <a href="htmlcss.html"><button style="margin-right: 50px;color: rgba(255,255,255,.6);">HTML and CSS Projects</button></a>
+        <a href="index.html"><button style="margin-right: 50px; marin-left: 50px;color: rgba(255,255,255,.6);"><img src="Emblem.png"     
+        style="height:50px; padding: 0px; margin:0px;"></button></a>
+        <a href="mobile.html"><button style="margin-left: 100px;color: rgba(255,255,255,.6);">Mobile Projects</button></a>
+        <a href="aboutme.html"><button style="margin-left: 100px;color: rgba(255,255,255,.6);">About Me</button></a>
+        </div>
+    </nav>
+</section>
+<body>
+
+</body>
+</html>

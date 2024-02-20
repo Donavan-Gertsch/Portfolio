@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>My Portfolio</title>
+    <link href="scratch.css" rel="stylesheet" type="text/css"/>
+    <link href="website.java" rel="stylesheet" type="text/css"/>
+    <link href="html/a1.html"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="website.java">
+// Get all elements with class="closebtn"
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+// Loop through all close buttons
+for (i = 0; i < close.length; i++) {
+  // When someone clicks on a close button
+  close[i].onclick = function(){
+
+    // Get the parent of <span class="closebtn"> (<div class="alert">)
+    var div = this.parentElement;
+
+    // Set the opacity of div to 0 (transparent)
+    div.style.opacity = "0";
+
+    // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+
+
+
+        }
+        body{
+        background: linear-gradient(135deg, rgba(15,32,39,0.65),rgba(32,58,67,0.65),rgba(44,83,100,0.65)) ,url('./newyork.jpg') no-repeat;
+
+
+        }
+        .header{
+        background-color: rgba(255, 255, 255, 0.0);
+        text-align: center;
+        height: 100px;
+        
+        }
+        button{
+        background-color: rgba(255, 255, 255);
+        font-size: 20px;
+        Margin: 10px;
+        padding: 10px;
+        border: none;
+        background: none;
+        }
+        button:hover{
+        text-decoration: underline;
+        }
+        img{
+        padding: 25px;
+        height: 350px;
+        }
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+        .slideshow{
+        text-align: left;
+        margin: 0px;
+        }
+  footer{
+  padding:0;
+  margin: 75px;
+  background: #222;
+  font-family: 'Roboto';
+}
+ul{
+  position: absolute;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  
+}
+ul li{
+  list-style-type: none;
+  margin: 0 7px;
+  padding: 50px;
+}
+ul li a .fa{
+  line-height: 80px;
+  color: #262626;
+  transition: 0.5s;
+  font-size: 40px;
+  padding-right: 15px;
+}
+ul li a span{
+  position: absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 4px;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;  
+}
+ul li a{
+text-decoration: none;
+display: absolute;
+display: block;
+width: 210px;
+height: 80px;
+text-align: left;
+background: #f2f2f2;
+padding-left: 20px;
+transform: rotate(-30deg) skewX(25deg);
+box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+transition: 0.5s;
+}
+ul li a:before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewY(-45deg);
+  transform: 0.5s;
+}
+ul li a:after{
+content: '';
+position: absolute;
+bottom: -20px;
+left: -10px;
+height: 20px;
+width: 100%;
+background: #b1b1b1;
+transform: rotate(0deg) skewX(-45deg);
+transition: 0.5s;
+}
+ul li a:hover{
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+ul li:hover .fa{
+  color: #fff;
+}
+ul li:hover span{
+  color: #fff;
+}
+ul li:hover:nth-child(1) a{
+  background: #3b5998;
+}
+ul li:hover:nth-child(1) a:before{
+  background: #365492;
+}
+ul li:hover:nth-child(1) a:after{
+  background: #4a69ad;
+}
+ul li:hover:nth-child(2) a{
+  background: linear-gradient(#8A2387,#E94057,#F27121);
+}
+ul li:hover:nth-child(2) a:before{
+  background: #8A2387;
+}
+ul li:hover:nth-child(2) a:after{
+  background: #8A2387;
+}
+ul li:hover:nth-child(3) a{
+  background: #53b9e0;
+}
+ul li:hover:nth-child(3) a:before{
+  background: #53b9e0;
+}
+ul li:hover:nth-child(3) a:after{
+  background: #53b9e0;
+}
+      ul li:hover:nth-child(4) a{
+  background: #dd4b39;
+}
+ul li:hover:nth-child(4) a:before{
+  background: #dd4b39;
+}
+ul li:hover:nth-child(4) a:after{
+  background: #dd4b39;
+}
+
+    </style>
+
+</head>
+
+<section class="header" id="header">
+    <nav>
+        <div id="hb">
+        
+        <a href="java.html"><button style="margin-right: 100px; color: rgba(255,255,255,.6);">Java Projects</button></a>
+        <a href="htmlcss.html"><button style="margin-right: 50px;color: rgba(255,255,255,.6);">HTML and CSS Projects</button></a>
+        <a href="index.html"><button style="margin-right: 50px; marin-left: 50px;color: rgba(255,255,255,.6);"><img src="Emblem.png"     
+        style="height:50px; padding: 0px; margin:0px;"></button></a>
+        <a href="mobile.html"><button style="margin-left: 100px;color: rgba(255,255,255,.6);">Mobile Projects</button></a>
+        <a href="aboutme.html"><button style="margin-left: 100px;color: rgba(255,255,255,.6);">About Me</button></a>
+        </div>
+    </nav>
+</section>
+<body>
+
+</body>
+  <footer>
+  <ul>
+        <!--------------------------------------------->
+
+      <li>
+        <a href="https://instagram.com/donavan.gertsch?igshid=YmMyMTA2M2Y=">
+            <i class="fa fa-facebook"></i>
+            <span> Facebook </span>
+        </a>
+      </li
+    <!----------------------------------------------->
+
+            <li>
+        <a href="*">
+            <i class="fa fa-instagram"></i>
+            <span> Instagram </span>
+        </a>
+            </li>
+    <!----------------------------------------------->
+          <li>
+        <a href="*">
+            <i class="fa fa-twitter"></i>
+            <span> Twitter </span>
+        </a>
+          </li>
+      <!---------------------------------------------->
+          <li>
+        <a href="*">
+            <i class="fa fa-linkedin"></i>
+            <span> Linkedin </span>
+        </a>
+          </li>
+
+  </ul>      
+<footer>
+</html>

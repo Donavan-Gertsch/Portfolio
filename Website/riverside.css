@@ -1,0 +1,149 @@
+*{
+caret-color: transparent;
+}
+ body{
+background: rgb(0,18,69);
+background: linear-gradient(360deg, rgba(0,18,69,1) 0%, rgba(1,0,163,1) 8%, rgba(3,7,166,1) 10%, rgba(48,147,227,1) 25%, rgba(194,227,255,1) 38%, rgba(255,255,255,1) 85%);
+background-repeat: no-repeat;
+background-repeat: round;
+
+margin:25px;
+ }
+ .header{
+ text-align:center;
+ font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
+ color: #0100a3;
+ font-size:60px;
+ margin:0;
+ padding:0;
+ }
+#slide-Container{
+height: 600px;
+width: 100%;
+background-image: url("world/1.jpg");
+background-size: cover;
+display:flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 15px;
+}
+#prev{
+color: white;
+margin: 0;
+padding: 0;
+height: 75px;
+width: 50px;
+background-color: rgba(239, 239, 240, 0);
+font-size: 25px;
+}
+#prev:hover{
+color: white;
+margin: 0;
+padding: 0;
+height: 75px;
+width: 50px;
+background-color: rgba(239, 239, 240, .4);
+font-size: 25px;
+}
+#next{
+color:white;
+margin: 0;
+padding: 0;
+height: 75px;
+width: 50px;
+background-color: rgba(239, 239, 240, 0);
+font-size: 25px;
+}
+#next:hover{
+color:white;
+margin: 0;
+padding: 0;
+height: 75px;
+width: 50px;
+background-color: rgba(239, 239, 240, .4);
+font-size: 25px;
+}
+.map-container{
+width:100%;
+height:100vh;
+display:flex;
+align-content:center;
+justify-content:center;
+}
+iframe{
+height:700px;
+width:700px;
+padding:30px;
+}
+.contact{
+height:640px;
+width:600px;
+border-radius:15px;
+background-color: #505050;
+padding: 30px;
+margin:30px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+h1.contact-head{
+color:white;
+font-size:40px;
+text-align:center;
+height:100px;
+width:100%;
+}
+.form-group{
+margin-bottom: 15px;
+}
+.form-group.msg{
+margin-top: 40px;
+}
+.form-group.buttons{
+margin-top: 0px;
+}
+.form-control{
+width: 100%;
+padding: 10px 0;
+background-color: transparent;
+border: none;
+outline: none;
+font-size:14px;
+color:#ddd;
+text-transform: uppercase;
+border-bottom:1px solid #666;
+transition: border-color 0.2s;
+margin-top:50px;
+}
+.form-control::placeholder{
+color:#666;
+}
+.form-control:focus{
+border-bottom-color:#ddd;
+}
+.form-btn{
+background-color:transparent;
+border:none;
+font-family:'Century Gothic';
+font-size:14px;
+cursor: pointer;
+outline:none;
+color:white;
+margin: 15px 15px 0px 15px;
+border-bottom: 1px solid white;
+transition: 0.5s;
+}
+  .item2{
+ background-image: url("riversidelogo.png");
+ height:500px;
+ flex-grow:1;
+ display:flex;
+ gap:80%;
+ border-radius:15px;
+  }
+ h3.contact-mission{
+ color:white;
+ font-size:20px;
+ text-align:center;
+ padding-right: 75px;
+ }
